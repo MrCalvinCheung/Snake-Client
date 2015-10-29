@@ -1,10 +1,8 @@
 package Example;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import sdk.Logic;
 
-import java.io.*;
+import java.io.IOException;
 /**
  * Created by Calvin on 29/10/2015.
  */
