@@ -2,6 +2,7 @@ package UI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 /**
  * Created by Calvin on 29/10/2015.
@@ -67,9 +68,13 @@ public class LoginPanel extends JFrame {
         TestForgotPass.setBounds(211, 391, 270, 28);
         TestForgotPass.setActionCommand("OpenForgotCheckUser");
         add(TestForgotPass);
+
+        setVisible(true);
+        setSize(500, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
- /*   public String getTextFieldUserName()
+    public String getTextFieldUserName()
     {
         return textFieldUsername.getText();
     }
@@ -77,7 +82,7 @@ public class LoginPanel extends JFrame {
     {
         String password = new String(textFieldPassword.getPassword());
         return password;
-    }*/
+    }
 
  /*   public void setClearUserName()
     {
@@ -92,9 +97,10 @@ public class LoginPanel extends JFrame {
         this.errorMessage.setText(errorMessage);
     }*/
 
-/*    public void addActionListener(ActionListener ac)
+
+    public void addActionListener(ActionListener ac)
     {
         TestLogin.addActionListener(ac);
         TestForgotPass.addActionListener(ac);
-    }*/
+    }
 }

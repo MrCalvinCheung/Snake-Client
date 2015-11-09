@@ -33,24 +33,10 @@ public class ServerConnection {
         return port;
     }
 
-    public void get(String path){
+    public String post(String json, String path){
 
         Client client = Client.create();
-
-        WebResource webResource = client.resource(getHostAddress() + ":" + getPort() + "/api/" + path);
-        ClientResponse response = webResource.type("application/json").get()
-
-
-        String output = response.getEntity(String.class);
-        System.out.println(output);
-
-
-    }
-
-    public void post(String json, String path){
-
-        Client client = Client.create();
-
+        System.out.println(getHostAddress() + ":" + getPort() + "/api/" + path);
         WebResource webResource = client.resource(getHostAddress() + ":" + getPort() + "/api/" + path);
         ClientResponse response = webResource.type("application/json").post(ClientResponse.class, json);
 
@@ -60,7 +46,18 @@ public class ServerConnection {
         }
 
         String output = response.getEntity(String.class);
-        System.out.println(output);
 
+        return output;
+
+    }
+
+    public String get(String path){
+
+        Client client = Client.create();
+        System.out.println(getHostAddress() + ":" + getPort() + "/api/" + path);
+        WebResource webResource = client.resource(getHostAddress() + ":" + getPort() + "/api/" + path);
+        ClientResponse response = webResource.type("application/json").get(ClientResponse.class);
+
+        return response.getEntity(String.class);
     }
 }

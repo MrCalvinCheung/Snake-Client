@@ -1,6 +1,7 @@
 package SDK;
 
 
+import UI.LoginPanel;
 import com.google.gson.Gson;
 
 /**
@@ -12,9 +13,11 @@ public class Logic {
 
         ServerConnection serverConnection = new ServerConnection();
 
+        LoginPanel loginPanel = new LoginPanel();
+
         User user = new User();
-        user.setPassword(password);
-        user.setUsername(username);
+        user.setPassword(loginPanel.getTextFieldPassword());
+        user.setUsername(loginPanel.getTextFieldUserName());
 
         String json = new Gson().toJson(user);
 

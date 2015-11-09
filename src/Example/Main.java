@@ -1,7 +1,5 @@
 package Example;
 
-import sdk.Logic;
-
 import java.io.IOException;
 /**
  * Created by Calvin on 29/10/2015.
@@ -9,11 +7,16 @@ import java.io.IOException;
 
 public class Main {
 
-        public static void main(String args[]) throws IOException {
+        public static void main(String args[]){
 
-            Logic.login("doek4life", "abc123");
-            Logic.createGame("battle_to_death",1);
+            try {
+                Config.init();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
+
+            //new Api().login();
         }
     }
 
