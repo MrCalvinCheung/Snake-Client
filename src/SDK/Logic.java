@@ -1,7 +1,6 @@
 package SDK;
 
 
-import UI.LoginPanel;
 import com.google.gson.Gson;
 
 /**
