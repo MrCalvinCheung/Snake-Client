@@ -16,24 +16,20 @@ public class Api {
     public String login(User user) {
 
         return serverConnection.post(new Gson().toJson(user), "login");
+
     }
     
     public ArrayList <User> getUsers(){
 
         String jsonOfUsers = serverConnection.get(Config.getServerAdresseAllUsers());
 
-        return new Gson().fromJson(jsonOfUsers, new TypeToken<ArrayList<User>>() {
-        }.getType());
+        return new Gson().fromJson(jsonOfUsers, new TypeToken<ArrayList<User>>(){}.getType());
 
     }
 
-    public String deleteUser(){
+  /*  public String DeleteUser(User) {
 
-        String deleteUser = serverConnection.get(User);
-
-        return new Gson.fromJson(deleteUser());
-
+        return serverConnection.post(new Gson().toJson((User),"users/delete");
     }
-
-
+*/
 }
