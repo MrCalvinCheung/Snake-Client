@@ -1,18 +1,22 @@
-package UI;
+package GUI;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Font;
 import java.awt.event.ActionListener;
 
-/**
- * Created by Calvin on 12/11/2015.
- */
-public class Login {
+import javax.swing.SwingConstants;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
 
+
+public class Login extends JPanel {
     private JTextField Username;
     private JPasswordField password;
     private JButton btnLogin;
-    private JLabel lblSnake;
+    private JLabel lblErrorMessage;
 
     /**
      * Create the panel.
@@ -20,9 +24,9 @@ public class Login {
     public Login() {
         setLayout(null);
 
-        JLabel lblSnake = new JLabel("Snake");
+        JLabel lblSnake = new JLabel("Welcome to snake");
         lblSnake.setHorizontalAlignment(SwingConstants.CENTER);
-        lblSnake.setBounds(203, 40, 91, 22);
+        lblSnake.setBounds(120, 40, 245, 22);
         lblSnake.setFont(new Font("Lucida Grande", Font.BOLD, 25));
         add(lblSnake);
 
@@ -49,17 +53,23 @@ public class Login {
         password.setBounds(174, 183, 149, 28);
         add(password);
 
+        lblErrorMessage = new JLabel("");
+        lblErrorMessage.setBounds(120, 269, 245, 16);
+        add(lblErrorMessage);
+
     }
 
     public JButton getBtnLogin() {
         return btnLogin;
     }
 
+    public void setErrorMessage(String ErrorMessage) {
+        this.lblErrorMessage.setText(ErrorMessage);
+    }
+
     public void addActionListener(ActionListener l) {
 
         btnLogin.addActionListener(l);
     }
-
-
 
 }

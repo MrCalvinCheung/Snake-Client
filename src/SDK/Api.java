@@ -27,6 +27,11 @@ public class Api {
 
     }
 
+    public DeleteGame(Game gameid) {
+
+        return serverConnection.post(new Gson().fromJson(gameid),"games");
+    }
+
   /*  public String DeleteUser(User) {
 
         return serverConnection.post(new Gson().toJson((User),"users/delete");

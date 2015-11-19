@@ -1,14 +1,12 @@
-package UI;
+package Logic;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 /**
  * Created by Calvin on 12/11/2015.
  */
 public class Logic {
 
 
-        private Screen screen;
+       /* private Screen screen;
 
 
         public Logic() {
@@ -31,7 +29,7 @@ public class Logic {
                     screen.show(screen.MENU_USER);
                 }
             }
-        }
-    }
+        }*/
+
 
 }

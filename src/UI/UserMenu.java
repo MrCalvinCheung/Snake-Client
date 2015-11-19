@@ -1,50 +1,78 @@
 package UI;
-
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JButton;
-import javax.swing.JList;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
 
 
-/**
- * Created by Calvin on 12/11/2015.
- */
-public class UserMenu {
+public class UserMenu extends JPanel {
 
-    setLayout(null);
 
-    JLabel Welcome = new JLabel("Welcome to Snake");
-    Welcome.setBounds(134, 28, 229, 27);
-    Welcome.setHorizontalAlignment(SwingConstants.CENTER);
-    Welcome.setFont(new Font("Lucida Grande", Font.BOLD, 22));
-    add(Welcome);
+    private JButton btnStartGame;
+    private JButton btnHighscore;
+    private JButton btnLogOut;
+    private JButton btnCreateGame;
+    private JButton btnDeleteGame;
+    /**
+     * Create the panel.
+     */
+    public UserMenu() {
+        setLayout(null);
 
-    JButton btnStartSpil = new JButton("Start game");
-    btnStartSpil.setBounds(61, 104, 113, 62);
-    add(btnStartSpil);
+        JLabel Welcome = new JLabel("Main Menu");
+        Welcome.setBounds(134, 28, 229, 27);
+        Welcome.setHorizontalAlignment(SwingConstants.CENTER);
+        Welcome.setFont(new Font("Lucida Grande", Font.BOLD, 22));
+        add(Welcome);
 
-    JButton btnVisHighscore = new JButton("Highscore");
-    btnVisHighscore.setBounds(193, 178, 113, 62);
-    add(btnVisHighscore);
+        btnStartGame = new JButton("Start game");
+        btnStartGame.setBounds(61, 104, 113, 62);
+        add(btnStartGame);
 
-    JButton btnSletSpil = new JButton("Load Game");
-    btnSletSpil.setBounds(61, 178, 113, 62);
-    add(btnSletSpil);
+        btnHighscore = new JButton("Highscore");
+        btnHighscore.setBounds(116, 178, 113, 62);
+        add(btnHighscore);
 
-    JButton btnLogUd = new JButton("Log ud");
-    btnLogUd.setBounds(318, 178, 113, 62);
-    add(btnLogUd);
+        btnLogOut = new JButton("Log Out");
+        btnLogOut.setBounds(250, 178, 113, 62);
+        add(btnLogOut);
 
-    JButton btnOpretSpil = new JButton("Create Game");
-    btnOpretSpil.setBounds(193, 104, 113, 62);
-    add(btnOpretSpil);
+        btnCreateGame = new JButton("Create Game");
+        btnCreateGame.setBounds(193, 104, 113, 62);
+        add(btnCreateGame);
 
-    JButton btnDeleteGame = new JButton("Delete Game");
-    btnDeleteGame.setBounds(318, 104, 113, 62);
-    add(btnDeleteGame);
+        btnDeleteGame = new JButton("Delete Game");
+        btnDeleteGame.setBounds(318, 104, 113, 62);
+        add(btnDeleteGame);
+
+    }
+
+    public JButton getBtnStartGame(){
+        return btnStartGame;
+    }
+    public JButton getBtnHighscore(){
+        return btnHighscore;
+    }
+    public JButton getBtnLogout(){
+        return btnLogOut;
+    }
+    public JButton getBtnCreateGame(){
+        return btnCreateGame;
+    }
+    public JButton getbtnDeleteGame(){
+        return btnDeleteGame;
+    }
+
+    public void addActionListener(ActionListener l) {
+
+        btnStartGame.addActionListener(l);
+        btnHighscore.addActionListener(l);
+        btnLogOut.addActionListener(l);
+        btnCreateGame.addActionListener(l);
+        btnDeleteGame.addActionListener(l);
+
+    }
+
+
+
 
 }
-
-
