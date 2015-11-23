@@ -12,6 +12,7 @@ public class UserMenu extends JPanel {
     private JButton btnLogOut;
     private JButton btnCreateGame;
     private JButton btnDeleteGame;
+    private JLabel lblPleaseChooseAn;
     /**
      * Create the panel.
      */
@@ -44,6 +45,10 @@ public class UserMenu extends JPanel {
         btnDeleteGame.setBounds(318, 104, 113, 62);
         add(btnDeleteGame);
 
+        lblPleaseChooseAn = new JLabel("Please choose an option");
+        lblPleaseChooseAn.setBounds(173, 67, 152, 16);
+        add(lblPleaseChooseAn);
+
     }
 
     public JButton getBtnStartGame(){
@@ -71,8 +76,4 @@ public class UserMenu extends JPanel {
         btnDeleteGame.addActionListener(l);
 
     }
-
-
-
-
 }

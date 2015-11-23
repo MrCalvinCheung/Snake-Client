@@ -1,19 +1,11 @@
 package SDK;
 
-
-import UI.Login;
-import UI.Screen;
-import com.google.gson.Gson;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 /**
  * Created by Calvin on 29/10/2015.
  */
 public class Logic {
 
-    public static void login(String username, String password){
+    /*public static void login(String username, String password){
 
         ServerConnection serverConnection = new ServerConnection();
 
@@ -65,32 +57,8 @@ public class Logic {
 
 
 
-    }
+    }*/
 
-    private Screen screen;
-
-
-    public Logic() {
-
-        screen = new Screen();
-        screen.setVisible(true);
-    }
-
-    public void run() {
-        screen.getlogin().addActionListener(new LoginActionListener());
-        screen.show(screen.LOGIN);
-
-    }
-
-    private class LoginActionListener implements ActionListener {
-
-        public void actionPerformed(ActionEvent e){
-
-            if (e.getSource() == screen.getlogin().getBtnLogin()) {
-                screen.show(screen.MENU_USER);
-            }
-        }
-    }
 
 
 }
